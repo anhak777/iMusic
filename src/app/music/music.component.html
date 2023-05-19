@@ -1,0 +1,46 @@
+<div class="basic-container">
+  <app-release-slider></app-release-slider>
+
+  <div class="genres">
+    <h3 class="title">Music by genre</h3>
+    <div class="genre-container">
+      <ul>
+        <ng-container *ngFor="let item of genreList; let i = index">
+          <li
+            (mouseover)="mouseOver(i)"
+            (mouseout)="mouseOut(i)"
+            [ngStyle]="{
+              background: item.hover ? item.bgColor : item.gradient
+            }"
+          >
+            <a>{{ item.genreName }}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+  <div class="listen-again">
+    <h3 class="title">Listen Again</h3>
+    <p class="description">Listen your favorite songs again</p>
+    <div class="track-container">
+      <ul>
+        <app-track [data]="trackList"></app-track>
+        <li class="icon-plus"><span>Show {{trackList.length - 9}} more tracks</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="new-released-albums">
+    <h3 class="title">New Released Albums</h3>
+    <p class="description">Month's top albums on Imusic</p>
+    <div class="album-container">
+      <ul>
+        <app-album [data]="albumList"></app-album>
+        <li class="icon-plus"><span>Show {{albumList.length - 6}} more<br> Albums</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

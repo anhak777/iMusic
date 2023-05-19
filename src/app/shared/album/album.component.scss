@@ -1,0 +1,44 @@
+.album-item {
+  display: inline-block;
+  background: url(../../../assets/img/Album_cover_01.png);
+  background-position: center center;
+  background-size: 15.7vw 230px;
+  background-repeat: no-repeat;
+  margin-right: .7vw;
+  margin-bottom: 20px;
+  width: 15.7vw;
+  height: 230px;
+  position: relative;
+  border-radius: 8px;
+  .album-container{
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(27px) brightness(160%) saturate(136%);
+    text-align: center;
+    padding: 17px 3vw 28px;
+    .album-image {
+      display: inline-block;
+      border-radius: 8px;
+      width: 185px;
+      height: 185px;
+      filter: drop-shadow(0px 4px 5px rgba(0,0,0,0.42 ));
+    }
+  }
+  .album-info{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    height: 54px;
+    border-radius: 0 8px 8px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    padding: 5px 20px 5px 30px;
+    h6.title {
+      font-size: 16px;
+      font-weight: normal;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+}

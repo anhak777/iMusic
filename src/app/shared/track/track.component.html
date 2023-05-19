@@ -1,0 +1,17 @@
+<ng-container *ngFor="let item of data; let i = index">
+  <li class="track-item" *ngIf="i < 9">
+    <div class="track-line">
+      <div class="track-number">{{ item.id }}</div>
+      <div class="right-side">
+        <div class="song-info">
+          <h6 class="title">{{ item.songTitle }}</h6>
+          <span>{{ item.artistName }} / {{ item.duration }}</span>
+        </div>
+        <div class="action">
+          <span class="icon-heart"></span>
+          <span class="icon-dots"></span>
+        </div>
+      </div>
+    </div>
+  </li>
+</ng-container>

@@ -1,0 +1,64 @@
+<section>
+  <div class="section-container">
+    <div class="user-settings" [class.expanded] = "expanded">
+      <div class="user-container">
+        <div class="user-avatar">
+          <img [src]="logged ? userImg : anonImg" alt="User_avatar">
+          <div class="login-action" *ngIf="!logged"><a (click)="login()">Login now</a></div>
+          <div class="welcome-text" *ngIf="logged">Hi, {{ userName }}</div>
+        </div>
+        <div class="expand-button" (click)="expand()">
+          <span class="top-line"></span>
+          <span class="bottom-line"></span>
+        </div>
+      </div>
+      <div class="expanded-content">
+        <ul>
+          <span class="line"></span>
+          <li><a>Profile</a></li>
+          <li><a>Account settings</a></li>
+          <span class="line"></span>
+          <li><a>+ Create company page</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="list-container">
+      <ul class="main-list">
+        <li>
+          <div class="icon-star"></div><div>Favorites</div>
+        </li>
+        <li>
+          <div class="icon-pages"></div><div>Pages</div>
+          <div class="plus-container">
+            <app-plus-button></app-plus-button>
+          </div>
+        </li>
+        <li>
+          <div class="icon-people"></div><div>Band</div>
+        </li>
+        <li>
+          <div class="icon-people"></div><div>Band</div>
+        </li>
+        <li>
+          <div class="icon-history"></div><div>History</div>
+        </li>
+        <li>
+          <div class="icon-playlist"></div><div>Playlists</div>
+          <div class="plus-container">
+            <app-plus-button></app-plus-button>
+          </div>
+        </li>
+      </ul>
+      <ul class="play-list">
+        <li *ngFor="let item of playLists">
+          <div class="list-cover">
+            <img [src]="item.cover" alt="cover">
+          </div>
+          <div class="list-title">
+            {{ item.title }}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

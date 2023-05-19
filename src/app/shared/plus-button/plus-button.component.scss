@@ -1,0 +1,36 @@
+.plus-button {
+  position: absolute;
+  z-index: 1;
+  width: 26px;
+  height: 26px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 12px;
+  cursor: pointer;
+  transition-delay: .2s;
+  transition: all .3s ease-out;
+  &:hover {
+    border-color: #02A8F2;
+    background-color: #02A8F2;
+    line-height: 31px;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    transform: translate(-3px, -3px);
+  }
+  &:active {
+    transition-duration: .2s;
+    background-color: #2B2C36;
+    color: #02A8F2;
+    border-color: transparent;
+    border-radius: 6px;
+    line-height: 53px;
+    width: 54px;
+    height: 54px;
+    font-size: 20px;
+    transform: translate(-14px, -14px);
+  }
+}

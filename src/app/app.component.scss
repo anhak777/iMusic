@@ -1,0 +1,24 @@
+.main-background {
+  background-color: #14161d;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: -5;
+  background-image: url(../assets/img/MaskGroup1.png);
+  background-repeat: no-repeat;
+  background-position: -120px -70px;
+  background-attachment: fixed;
+  .blurred-layer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(50px) brightness(80%) saturate(250%);
+  }
+}

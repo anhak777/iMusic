@@ -1,0 +1,45 @@
+.slider-container {
+  background-color: black;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .slider-info {
+    width: 100%;
+    padding: 115px 0 0 50px;
+    h4 {
+      font-size: 20px;
+      font-weight: 200;
+    }
+    h2 {
+      font-size: 48px;
+      font-weight: bold;
+      margin: 20px 0 5px;
+    }
+    .carousel {
+      margin-top: 38px;
+      display: flex;
+      img {
+        display: block;
+        width: 54px;
+        height: 54px;
+        margin-right: 5px;
+      }
+      .active-img {
+        border-bottom: 2px solid white;;
+      }
+    }
+  }
+  .active-cover {
+    position: relative;
+    .darker-effect {
+      position: absolute;
+      width: 62%;
+      height: 100%;
+      background: linear-gradient(90deg, black, transparent);
+    }
+    img {
+      display: block;
+    }
+  }
+}

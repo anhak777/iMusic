@@ -1,0 +1,87 @@
+h3.title {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 54px 0 11px;
+}
+
+.description {
+  color: #9B9C9E;
+  font-size: 14px;
+}
+
+.genres {
+  .genre-container {
+    ul {
+      display: grid;
+      grid-template-columns: auto auto auto auto auto auto;
+      gap: 10px 16px;
+      li {
+        display: inline-block;
+        color: white;
+        font-size: 14px;
+        border-radius: 8px;
+        padding: 17px 0;
+        text-align: center;
+        min-width: 143px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.listen-again {
+  .track-container {
+    max-height: 370px;
+    ul li {
+      transition-delay: .2s;
+      transition: all .2s ease-in;
+    }
+    .icon-plus {
+      display: inline-block;
+      width: 24vw;
+      border-radius: 8px;
+      margin-top: 10px;
+      background-color: black;
+      font-size: 16px;
+      text-align: center;
+      padding: 20px;
+      margin-left: 10px;
+      border: 1px solid #393A44;      ;
+      span {
+        margin-left: 14px;
+      }
+    }
+  }
+}
+
+.new-released-albums {
+  .album-container {
+    margin: 20px auto;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    * {
+      display: inline-block;
+    }
+    li:last-of-type {
+      cursor: pointer;
+      position: relative;
+      left: 32.8vw;
+      top: -250px;
+      border-radius: 8px;
+      background-color: rgba(6, 6, 8, .84);
+      text-align: center;
+      padding: 75px 80px 0 85px;
+      font-size: 30px;
+      line-height: 27px;
+      height: 235px;
+      width: 15.7vw;
+      font-weight: light;
+      span {
+        font-size: 20px;
+        margin-top: 5px;
+        font-weight: normal;
+      }
+    }
+  }
+}

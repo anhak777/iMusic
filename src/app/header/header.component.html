@@ -1,0 +1,23 @@
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/music"><img src="../../assets/logo.svg" alt="iMusic_logo"></a>
+    </div>
+    <nav class="nav">
+      <ul>
+        <li><a routerLink="/music" routerLinkActive="activeLink" ariaCurrentWhenActive="page">Music</a></li>
+        <li><a routerLink="/radio" routerLinkActive="activeLink" ariaCurrentWhenActive="page">Radio</a></li>
+        <li><a routerLink="/playlists" routerLinkActive="activeLink" ariaCurrentWhenActive="page">Playlists</a></li>
+      </ul>
+    </nav>
+    <div class="action">
+      <div class="search">
+        <input type="text" placeholder="Search...">
+        <span class="icon-search"></span>
+      </div>
+      <span class="icon-bell" (click)="seeNotif()">
+        <span class="blue-dot" *ngIf="!notifSeen"></span>
+      </span>
+    </div>
+  </div>
+</header>

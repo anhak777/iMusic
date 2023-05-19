@@ -1,0 +1,52 @@
+<section>
+  <div class="section-container">
+    <div
+      class="tab-container"
+      [ngStyle]="{ 'background-color': leftTab ? 'transparent' : '#1C1D23' }"
+    >
+      <div
+        class="tab"
+        (click)="switchToleftTab()"
+        [ngStyle]="{ color: leftTab ? 'white' : '#b1b2b8' }"
+      >
+        Now Playing
+      </div>
+      <div
+        class="tab"
+        (click)="switchTorightTab()"
+        [ngStyle]="{ color: leftTab ? '#b1b2b8' : 'white' }"
+      >
+        Suggested
+      </div>
+      <div
+        class="active-border"
+        [ngStyle]="{
+          transform: leftTab ? 'translateX(0)' : 'translateX(100%)'
+        }"
+      ></div>
+    </div>
+    <div class="playlist-container">
+      <ul class="playlist">
+        <ng-container *ngFor="let item of playlist; let i = index">
+          <li class="playlist-item" (click)="turnOnPlayer(i)">
+            <div class="song">
+              <div class="cover" [ngClass]="{'playing-state': item.playing}">
+                <img [src]="item.coverImg" alt="cover_img" />
+                <span class="icon-playing" *ngIf="item.playing"></span>
+                <span class="icon-stopped" *ngIf="!item.playing"></span>
+              </div>
+              <div class="song-info">
+                <h6 class="title">{{ item.songTitle }}</h6>
+                <span>{{ item.artistName }} / {{ item.duration }}</span>
+              </div>
+            </div>
+            <div class="action">
+              <span class="icon-heart"></span>
+              <span class="icon-dots"></span>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</section>

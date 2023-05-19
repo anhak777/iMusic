@@ -1,0 +1,11 @@
+<ng-container  *ngFor="let item of data; let i = index">
+  <li class="album-item" *ngIf="i < 6" [ngStyle]="{'background': 'url('+ item.coverImg +')'}">
+    <div class="album-container">
+      <img class="album-image" [src]="item.coverImg">
+    </div>
+    <div class="album-info">
+      <h6 class="title">{{ item.albumName }}</h6>
+      <span>{{ item.artistName }} - {{ item.year }}</span>
+    </div>
+  </li>
+</ng-container>
